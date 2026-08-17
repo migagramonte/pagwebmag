@@ -1,7 +1,7 @@
 /*Navbar*/
 /* Navbar container */
 .navbar {
-  background-color: #333;
+  background-color: #37447d;
   font-family: Arial;
   display: flex;
   justify-content: center;
@@ -38,7 +38,6 @@
   display: inline-block;
   margin-left: 6px;
   vertical-align: middle;
-
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -47,9 +46,9 @@
 }
 
 
-/* Add a red background color to navbar links on hover */
+/* Add a background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #616fad;
 }
 
 /* Dropdown content (hidden by default) */
@@ -80,4 +79,16 @@
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.book-info {
+    width: 960px;
+    padding: 20px;
+}
+
+.book-info img {
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
