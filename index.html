@@ -7,31 +7,103 @@
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#">Início</a>
-        <div class="dropdown">
-            <button class="dropbtn">Livros
-                <span class="arrow"></span>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Quando tu nos mentes</a>
-                <a href="livros/l01.html">Amar de olhos fechados</a>
-                <a href="#">O Futuro é só amanhã</a>
+    <main>
+        
+<header>
+    <nav class="navbar">
+
+        <!-- SITE NAME / LOGO -->
+        <a href="index.html" class="logo">
+            Miguel Agramonte
+        </a>
+
+        <!-- NAVIGATION -->
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <!-- LIVROS -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Livros
+                    <span class="arrow"></span>
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="livros/l01.html">Livro 1</a>
+                    <a href="livros/livro2.html">Livro 2</a>
+                    <a href="livros/livro3.html">Livro 3</a>
+                </div>
             </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Podcasts
-                <span class="arrow"></span>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Ultravioleta</a>
-                <a href="#">Triangulação do Círculo</a>
+
+            <!-- PODCASTS -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Podcasts
+                    <span class="arrow"></span>
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="podcasts/podcast1.html">Podcast 1</a>
+                    <a href="podcasts/podcast2.html">Podcast 2</a>
+                </div>
             </div>
+
+            <a href="textos.html">Textos Soltos</a>
+
         </div>
-        <a href="#">Textos</a>
-    </div>
-    <div style="justify-content: center; align-items: center; display: flex; height: 100vh;">
-        <h1 style="font-weight: normal ;">Brevemente!</h1>
-    </div>
+
+    </nav>
+</header>
+
+
+        <!-- INTRODUCTION -->
+          <section class="hero">
+             <div class="hero-text">
+                <h1>Miguel Agramonte</h1>
+                
+                <div class="social-links">
+                
+                <a href="https://www.instagram.com/migagramonte" target="_blank" rel="noopener noreferrer"> Instagram </a>
+                <a href="https://www.facebook.com/miguelagramonteoficial" target="_blank" rel="noopener noreferrer"> Facebook </a>
+             </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/homepage.jpeg" alt="Fotografia de Miguel Agramonte">
+            </div>
+        </section>
+        <!-- BIO -->
+        <section class="bio-section">
+            <div class="section-title">
+                <p class="subtitle">SOBRE MIM</p>
+                <h2>Uma pequena biografia</h2>
+            </div>
+            <div class="bio-text">
+                <p>Miguel Agramonte é um autor português, nascido em Moçambique (Lourenço Marques, atual Maputo), partilhando residência entre Portugal (Aveiro) e Brasil (São Paulo). </p>
+                <p> A riqueza dos sons e dos sabores da língua portuguesa, e a forma como varia em função de tantos espaços geográficos onde ela é escrita e falada, é algo que, desde cedo, o apaixonou. É assim que as viagens, a leitura e a escrita lhe permitem encontrar as condições físicas e mentais para se embrenhar pela construção de diversas realidades. </p>
+                <p> «Creio que têm sido todos os diferentes mundos e culturas, por onde tenho passado, que me têm permitido criar os ambientes e personagens para as minhas histórias. O passar dos anos foi aguçando o prazer pela escrita e permitindo o amadurecimento da mesma». </p>
+                <p> Desde muito cedo que sente a escrita como um refúgio. De pequenos textos, registados em blocos de notas, que costuma levar consigo, a contos, foi atravessando várias etapas, até ter chegado à escrita de livros. Gostando de participar em diversos projetos de colaboração online, com outros autores, como, por exemplo, ‘Bacalhau com Cachaça’ ou ‘Vidas Alternativas’, só em 2015 é que ponderou, seriamente, a possibilidade de publicar.  </p>
+                <p> '24 Contos Ilustrados' é o seu quarto livro publicado. 'Quando tu nos mentes', o seu primeiro livro, foi publicado em 2016, seguiu-se ‘Amar de olhos fechados’, em 2017 e, em 2018, ‘O Futuro é só amanhã’ que, cronologicamente, foi o primeiro que escreveu.</p>
+                <p> «Gosto bastante de conversar e trocar ideias com quem me lê, seja acerca da identificação e coincidências com as histórias ou situações descritas, seja acerca dos próprios intervenientes. Acredito que a leitura tem que oferecer bons momentos e fico feliz se os consigo proporcionar. Mas, também considero importante fazer o leitor ir além da história, pensar com ela e sentir saudades dela e das personagens, quando a termina de ler. Uma boa história deve marcar, pela positiva, quem a lê».</p>
+
+            </div>
+        </section>
+        <!-- NEWS / UPDATES -->
+         <section class="updates-section">
+            <div class="section-title">
+                <p class="subtitle">NOVIDADES</p>
+                <h2>Últimas atualizações</h2>
+            </div> <!-- SCROLLABLE CONTAINER --> 
+            <div class="updates-container">
+                <article class="update">
+                    <time datetime="2026-08-12"> 15 AGOSTO 2026 </time>
+                    <h3>Um novo livro está a caminho</h3> <p> O '24 Contos Ilustrados' será publicado ainda este ano. A data e local de lançamento será anunciada em breve</p>
+                    
+                </article>  
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+         <footer> <p> © 2026 Miguel Agramonte. Todos os direitos reservados. </p> </footer>
 </body>
 </html>

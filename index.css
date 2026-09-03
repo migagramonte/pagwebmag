@@ -1,94 +1,866 @@
-/*Navbar*/
-/* Navbar container */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    background-color: #f6f7fb;
+    color: #20233a;
+
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+header {
+    background-color: #f6f7fb;
+    border-bottom: 1px solid #d9dce8;
+}
+
 .navbar {
-  background-color: #37447d;
-  font-family: Arial;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 25px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Links inside the navbar */
-.navbar a {
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+    color: #37447d;
+
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
-/* The dropdown container */
+
+/* ========================================
+   MAIN NAVIGATION
+======================================== */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links > a,
+.dropbtn {
+    color: #20233a;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links > a:hover,
+.dropbtn:hover {
+    color: #37447d;
+}
+
+
+/* ========================================
+   DROPDOWN MENUS
+======================================== */
+
 .dropdown {
-  overflow: hidden;
+    position: relative;
 }
+
 
 /* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+
+.dropbtn {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }
+
+
+/* Dropdown arrow */
 
 .arrow {
-  display: inline-block;
-  margin-left: 6px;
-  vertical-align: middle;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid white;
+    width: 7px;
+    height: 7px;
+
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+
+    transform: rotate(45deg);
+
+    margin-top: -4px;
 }
 
 
-/* Add a background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #616fad;
-}
+/* Dropdown container */
 
-/* Dropdown content (hidden by default) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    position: absolute;
+
+    top: calc(100% + 15px);
+    left: -15px;
+
+    min-width: 180px;
+
+    background-color: #f6f7fb;
+
+    /* No border */
+    border: none;
+
+    /* Light shadow */
+    box-shadow: 0 5px 18px rgba(32, 35, 58, 0.15);
+
+    padding: 8px 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-5px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 100;
 }
 
-/* Links inside the dropdown */
+
+/* Dropdown links */
+
 .dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    display: block;
+
+    padding: 10px 15px;
+
+    color: #20233a;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+    color: #37447d;
+    background-color: #eaecf5;
 }
 
-/* Show the dropdown menu on hover */
+
+/* Show dropdown */
+
 .dropdown:hover .dropdown-content {
-  display: block;
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
 }
 
-.book-info {
-    width: 960px;
-    padding: 20px;
+
+
+/* ========================================
+   GENERAL LAYOUT
+======================================== */
+
+main {
+    max-width: 1200px;
+    margin: auto;
 }
 
-.book-info img {
-    width: 400px;
-    float: left;
-    margin-right: 20px;
+section {
+    padding: 100px 40px;
+}
+
+
+/* Small uppercase section labels */
+
+.subtitle {
+    color: #37447d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Headings */
+
+h1 {
+    color: #20233a;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 0.95;
+
+    font-weight: normal;
+}
+
+h2 {
+    color: #20233a;
+
+    font-size: 2.5rem;
+
+    font-weight: normal;
+
+    line-height: 1.1;
+}
+
+h3 {
+    color: #20233a;
+
+    font-size: 1.5rem;
+
+    font-weight: normal;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 700px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+
+/* Hero introduction */
+
+.intro {
+    color: #5d6175;
+
+    font-size: 1.3rem;
+
+    max-width: 500px;
+
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+/* Hero image */
+
+.hero-image img {
+    width: 100%;
+    height: 600px;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.button {
+    display: inline-block;
+
+    color: #37447d;
+
+    border: 1px solid #37447d;
+
+    padding: 12px 22px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.9rem;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #37447d;
+
+    color: #ffffff;
+}
+
+
+/* ========================================
+   BIOGRAPHY
+======================================== */
+
+.bio-section {
+    border-top: 1px solid #d9dce8;
+
+    display: grid;
+
+    grid-template-columns: 35% 65%;
+
+    gap: 80px;
+}
+
+.bio-text {
+    max-width: 750px;
+
+    color: #44485c;
+
+    font-size: 1.15rem;
+}
+
+.bio-text p {
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   SOCIAL MEDIA
+======================================== */
+
+.social-section {
+    border-top: 1px solid #d9dce8;
+    border-bottom: 1px solid #d9dce8;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+/* Social links container */
+
+.social-links {
+     display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+/* Social buttons */
+
+.social-links a {
+    color: #37447d;
+
+    border: 1px solid #37447d;
+
+    padding: 8px 16px;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: #37447d;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   UPDATES / NEWS
+======================================== */
+
+.updates-section {
+    display: grid;
+
+    grid-template-columns: 35% 65%;
+
+    gap: 80px;
+}
+
+
+/* Scrollable news container */
+
+.updates-container {
+    height: 500px;
+
+    overflow-y: auto;
+
+    border-top: 1px solid #d9dce8;
+}
+
+
+/* Individual update */
+
+.update {
+    padding: 30px 10px 30px 0;
+
+    border-bottom: 1px solid #d9dce8;
+}
+
+
+/* Date */
+
+.update time {
+    display: block;
+
+    color: #37447d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
     margin-bottom: 10px;
+}
+
+
+/* Update title */
+
+.update h3 {
+    margin-bottom: 10px;
+}
+
+
+/* Update text */
+
+.update p {
+    color: #5d6175;
+
+    max-width: 600px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Update link */
+
+.update a {
+    color: #37447d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.85rem;
+}
+
+.update a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+.updates-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.updates-container::-webkit-scrollbar-track {
+    background: #eaecf5;
+}
+
+.updates-container::-webkit-scrollbar-thumb {
+    background: #37447d;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    border-top: 1px solid #d9dce8;
+
+    padding: 30px 40px;
+
+    text-align: center;
+
+    color: #5d6175;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.75rem;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+    /* Navbar */
+
+    .navbar {
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* Sections */
+
+    section {
+        padding: 70px 20px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        min-height: auto;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        height: 450px;
+    }
+
+
+    /* Biography */
+
+    .bio-section {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    /* Socials */
+
+    .social-section {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    /* Updates */
+
+    .updates-section {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .updates-container {
+        height: 450px;
+    }
+
+
+    /* Dropdown */
+
+    .dropdown-content {
+        left: 50%;
+
+        transform: translate(-50%, -5px);
+    }
+
+    .dropdown:hover .dropdown-content {
+        transform: translate(-50%, 0);
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 25px 20px;
+    }
+}
+
+
+
+/* ========================================
+   BOOK PAGES
+======================================== */
+
+
+/* ========================================
+   BOOK HEADER
+======================================== */
+
+.book-header {
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* Book cover */
+
+.book-cover {
+    display: flex;
+    justify-content: center;
+}
+
+.book-cover img {
+    width: 100%;
+
+    max-width: 430px;
+
+    max-height: 600px;
+
+    object-fit: contain;
+}
+
+
+/* Book introduction */
+
+.book-introduction {
+    max-width: 600px;
+}
+
+.book-introduction h1 {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+
+    line-height: 0.95;
+}
+
+.book-author {
+    margin-top: 25px;
+
+    color: #5d6175;
+
+    font-size: 1.2rem;
+}
+
+
+/* ========================================
+   BOOK SECTIONS
+======================================== */
+
+.book-teaser,
+.book-section,
+.book-buy-section {
+
+    border-top: 1px solid #d9dce8;
+
+    display: grid;
+
+    grid-template-columns: 35% 65%;
+
+    gap: 80px;
+}
+
+
+/* ========================================
+   TEASER
+======================================== */
+
+.teaser-text {
+    max-width: 750px;
+
+    font-size: 1.25rem;
+
+    font-style: italic;
+
+    color: #44485c;
+}
+
+.teaser-text p {
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   SYNOPSIS & PREFACE
+======================================== */
+
+.book-text {
+    max-width: 750px;
+
+    color: #44485c;
+
+    font-size: 1.15rem;
+}
+
+.book-text p {
+    margin-bottom: 25px;
+}
+
+
+/* Preface author */
+
+.preface-author {
+    color: #37447d;
+
+    font-style: italic;
+
+    margin-top: 40px;
+}
+
+
+
+/* ========================================
+   BACK COVER
+======================================== */
+
+.back-cover-section {
+    border-top: 1px solid #d9dce8;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 100px 40px;
+}
+
+.back-cover-image {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+}
+
+.back-cover-image img {
+    width: 100%;
+
+    max-width: 600px;
+
+    max-height: 800px;
+
+    object-fit: contain;
+}
+
+
+
+/* ========================================
+   BUY SECTION
+======================================== */
+
+.book-buy-content {
+    max-width: 600px;
+}
+
+.book-buy-content p {
+    color: #5d6175;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .book-header {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        min-height: auto;
+    }
+
+
+    .book-cover {
+        justify-content: flex-start;
+    }
+
+
+    .book-cover img {
+        max-height: 500px;
+    }
+
+
+    .book-teaser,
+    .book-section,
+    .back-cover-section,
+    .book-buy-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .book-introduction h1 {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+
+    .back-cover-image {
+        justify-content: flex-start;
+    }
+
 }
