@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -697,6 +696,7 @@ footer {
 }
 
 
+
 /* ========================================
    BOOK SECTIONS
 ======================================== */
@@ -704,7 +704,6 @@ footer {
 .book-teaser,
 .book-section,
 .book-buy-section {
-
     border-top: 1px solid #d9dce8;
 
     display: grid;
@@ -712,6 +711,25 @@ footer {
     grid-template-columns: 35% 65%;
 
     gap: 80px;
+
+    padding: 60px 40px;
+}
+
+
+/* ========================================
+   SECTION TITLES
+======================================== */
+
+.book-teaser h2,
+.book-section h2,
+.book-buy-section h2 {
+    color: #37447d;
+
+    font-size: 2.5rem;
+
+    font-weight: normal;
+
+    line-height: 1.1;
 }
 
 
@@ -762,45 +780,6 @@ footer {
 }
 
 
-
-/* ========================================
-   BACK COVER
-======================================== */
-
-.back-cover-section {
-    border-top: 1px solid #d9dce8;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 100px 40px;
-}
-
-.back-cover-image {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    width: 100%;
-}
-
-.back-cover-image img {
-    width: 100%;
-
-    max-width: 600px;
-
-    max-height: 800px;
-
-    object-fit: contain;
-}
-
-
-
 /* ========================================
    BUY SECTION
 ======================================== */
@@ -816,6 +795,7 @@ footer {
 
     margin-bottom: 30px;
 }
+
 
 
 /* ========================================
@@ -842,16 +822,16 @@ footer {
         max-height: 500px;
     }
 
-
     .book-teaser,
     .book-section,
-    .back-cover-section,
     .book-buy-section {
-
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 30px;
+
+        padding: 50px 20px;
     }
+
 
 
     .book-introduction h1 {
