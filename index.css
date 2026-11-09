@@ -87,6 +87,26 @@ header {
     color: #37447d;
 }
 
+.nav-links > a.nav-button {
+    padding: 9px 16px;
+
+    border: 1px solid #37447d;
+
+    background-color: #37447d;
+
+    color: #ffffff;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.nav-links > a.nav-button:hover {
+    background-color: transparent;
+
+    color: #37447d;
+}
+
 
 /* ========================================
    DROPDOWN MENUS
@@ -328,6 +348,18 @@ h3 {
     background-color: #37447d;
 
     color: #ffffff;
+}
+
+.inline-link {
+    color: #37447d;
+
+    text-decoration: underline;
+
+    font-weight: 600;
+}
+
+.inline-link:hover {
+    text-decoration: none;
 }
 
 
@@ -751,6 +783,20 @@ footer {
     margin-bottom: 20px;
 }
 
+.teaser-text-plain {
+    font-style: normal;
+}
+
+.teaser-text ul {
+    padding-left: 25px;
+
+    margin-bottom: 20px;
+}
+
+.teaser-text li {
+    margin-bottom: 8px;
+}
+
 
 /* ========================================
    SYNOPSIS & PREFACE
@@ -796,6 +842,31 @@ footer {
     margin-bottom: 30px;
 }
 
+
+
+/* ========================================
+   BACK COVER
+======================================== */
+
+.back-cover-section {
+    border-top: 1px solid #d9dce8;
+
+    padding: 60px 40px;
+}
+
+.back-cover-image {
+    display: flex;
+
+    justify-content: center;
+}
+
+.back-cover-image img {
+    max-width: 430px;
+
+    max-height: 600px;
+
+    object-fit: contain;
+}
 
 
 /* ========================================
