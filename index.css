@@ -410,6 +410,10 @@ h3 {
     gap: 80px;
 }
 
+.bio-section h2 {
+    color: #37447d;
+}
+
 .bio-text {
     max-width: 750px;
 
